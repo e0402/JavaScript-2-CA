@@ -1,0 +1,36 @@
+@import "variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+/*Colors*/
+.green {
+    background: $primary;
+}
+
+.white {
+    color: $white;
+}
+
+/*Navigation*/
+nav {
+    background: $primary;
+}
+
+.navbar-brand {
+    color: $white;
+}
+
+/*Buttons*/
+.btn-one {
+    background: $primary;
+    color: $white;
+    border: none;
+}
+
+.btn-two {
+    background: $primary;
+    color: $white;
+    border: 1px solid $white;
+}
+
+
