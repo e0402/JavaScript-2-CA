@@ -10,9 +10,16 @@ export async function updatePost(postData) {
   }
   const updatePostURL = `${API_SOCIAL_URL}${action}/${postData.id}`;
 
+  const tagsArray = postData.tags.split(",");
+
   const response = await fetchWithToken(updatePostURL, {
     method,
-    body: JSON.stringify(postData),
+    body: JSON.stringify({
+      title: postData.title,
+      body: postData.body,
+      media: postData.media,
+      tags: tagsArray,
+    }),
   });
 
   return await response.json();
