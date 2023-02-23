@@ -7,6 +7,12 @@ export function postTemplateB(postData) {
   post.classList.add("post");
   post.innerText = postData.title;
 
+  // const productsContainer = document.getElementById("#posts");
+
+  // postData.forEach(function (post) {
+  //   productsContainer.innerHTML + `<div class="post">${postData.title}</div>`;
+  // });
+
   if (postData.media) {
     const img = document.createElement("img");
     img.src = postData.media;

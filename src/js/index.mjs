@@ -12,6 +12,8 @@ if (path === "/profile/login/") {
   listeners.setCreatePostFormListener();
 } else if (path === "/post/edit/") {
   listeners.setUpdatePostListener();
+} else if (path === "profile/edit") {
+  listeners.setUpdateProfileListener();
 }
 
 async function testTemplates() {
