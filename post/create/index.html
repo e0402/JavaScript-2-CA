@@ -21,7 +21,7 @@
           class="fas fa-user-friends fa-1x mx-2 ms-3"
           style="color: #ffffff"
         ></i>
-          <a class="navbar-brand me-5" href="home.html">Whazzup</a>
+          <a class="navbar-brand me-5" href="../../posts/">Whazzup</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -36,15 +36,15 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active white" aria-current="page" href="home.html"
+                <a class="nav-link active white" aria-current="page" href="../../posts/"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link white" href="profile.html">Profile</a>
+                <a class="nav-link white" href="../../profile/edit/">Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link white" href="index.html">Log-out</a>
+                <a class="nav-link white" href="">Log-out</a>
               </li>
             </ul>
             <form class="d-flex mx-4" role="search">
@@ -65,37 +65,22 @@
       <section class="container d-flex align-items-center justify-content-center mb-5" style="margin-top: 100px">
         <div class="card border-0" style="width: 42rem">
           <div class="card-body">
-            <h1 class="mb-2">Whazz on ur mind?</h1>
+            <h1 class="d-flex align-items-center justify-content-center">Say something...</h1>
             
-             
-
-            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+            <div class="col-md-12 col-lg-12 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-                <form id="createPost">
-                  <!-- <div class="d-flex align-items-center mb-3 pb-1">
-                    <i
-                      class="fas fa-user-friends fa-2x me-3"
-                      style="color: #00a088"
-                    ></i>
-                    <span class="h1 fw-bold mb-0">Whazzup</span>
-                  </div>
-
-                  <h5
-                    class="fw-normal mb-3 pb-3"
-                    style="letter-spacing: 1px"
-                  >
-                    Create a new post
-                  </h5> -->
-
+                <form id="createPost" action="../../posts/">
+                
                   <div class="form-outline mb-4">
                     <label
                     class="form-label"
                     for="form2Example27"
-                  >Title</label>
+                  >Title (required)</label>
                       <input
                         type="text"
                         name="title"
                         class="form-control form-control-lg"
+                        placeholder="The topic of your post"
                         required
                       />
                     </div>
@@ -104,19 +89,20 @@
                     <label
                     class="form-label"
                     for="form2Example27"
-                  >Body</label>
-                    <textarea class="form-control" name="body" required></textarea>
+                  >Text content (required)</label>
+                    <textarea class="form-control" name="body" placeholder="The content of your post..." required></textarea>
                   </div>
 
                   <div class="form-outline mb-4">
                     <label
                     class="form-label"
                     for="form2Example27"
-                  >Tags</label>
+                  >Tags (required)</label>
                     <input
                       type="text"
                       name="tags"
                       id="form2Example27"
+                      placeholder="topicone, topictwo, topicthree..."
                       class="form-control form-control-lg"
                     />
                   </div>
@@ -125,29 +111,36 @@
                     <label
                     class="form-label"
                     for="form2Example27"
-                  >Media</label>
+                  >Media (optional)</label>
                     <input
                       type="url"
                       name="media"
                       id="form2Example27"
+                      placeholder="https://example.com/photo-123"
                       class="form-control form-control-lg"
                     />
                   </div>
 
-                  <div class="pt-1 mb-4">
-                    <button class="btn btn-one btn-lg btn-block">
+                  <div class="pt-3">
+                    <button class="btn btn-two btn-outline-success btn-lg me-2 changePagetoPostFeed">
                       Create post
                     </button>
-                  </div>
-
-               
+                  <a
+                    href="../../posts/"
+                    class="btn btn-two btn-lg btn-outline-success"
+                    width=""
+                    style="
+                      padding: 8px;
+                      border-radius: 0.65rem;
+                      text-decoration: none;
+                    "
+                    ;
+                    >Cancel</a
+                  >
+                </div>
                 </form>
               </div>
             </div>
-
-
-
-
           </div>
         </div>
       </div>

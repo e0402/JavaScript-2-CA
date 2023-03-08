@@ -27,7 +27,7 @@
           class="fas fa-user-friends fa-1x mx-2 ms-3"
           style="color: #ffffff"
         ></i>
-        <a class="navbar-brand me-5" href="home.html">Whazzup</a>
+        <a class="navbar-brand me-5" href="/posts/">Whazzup</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -45,43 +45,66 @@
               <a
                 class="nav-link active white"
                 aria-current="page"
-                href="home.html"
+                href="/posts/"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link white" href="profile.html">Profile</a>
+              <a class="nav-link white" href="/profile/edit/">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link white" href="index.html">Log-out</a>
+              <a class="nav-link white" href="../profile/login/">Log-out</a>
             </li>
           </ul>
-          <form class="d-flex mx-4" role="search">
+          <form id="search" class="d-flex mx-4">
             <input
-              class="form-control me-2"
+              required
+              minlength="2"
+              name="term"
               type="search"
-              placeholder="Search for something..."
-              aria-label="Search"
+              class="form-control me-2"
+              id="searchInput"
+              placeholder="Search for post content..."
             />
-            <button class="btn btn-two btn-outline-success" type="submit">
-              Search
-            </button>
+            <button class="btn btn-two btn-outline-success">Search</button>
           </form>
         </div>
       </div>
     </nav>
-    <main class="m-5">
-      <section
-        class="container d-flex align-items-center justify-content-center mb-5"
-        style="margin-top: 100px"
+    <main class="">
+      <h1
+        class="d-flex align-items-center justify-content-center"
+        style="margin-top: 150px"
       >
-        <div class="card border-0" style="width: 42rem">
-          <div class="card-body">
-            <h1 class="mb-2">Whazz on ur mind?</h1>
-            <div class="col-12 col-md-6" id="posts">
-              <!-- thumbnails list -->
-            </div>
-          </div>
+        Whazz on ur mind?
+      </h1>
+      <div class="d-flex align-items-center justify-content-center mb-4">
+        <a
+          href="../post/create/"
+          class="btn btn-two btn-lg btn-outline-success"
+          width=""
+          style="
+            margin-top: 50px;
+            padding: 12.5px;
+            border-radius: 0.65rem;
+            text-decoration: none;
+          "
+          ;
+          >Create new post</a
+        >
+      </div>
+      <div class="d-flex align-items-center justify-content-center pt-5 mb-0">
+        <label for="" class="text-black me-2">Post filters:</label>
+        <select id="filterList" class="me-3" style="background: white">
+          <option value="2023">All year</option>
+          <option value="media">Media</option>
+          <option value="likes">Liked</option>
+          <option value="comments">Commented</option>
+        </select>
+      </div>
+      <section class="d-flex align-items-center justify-content-center">
+        <div class="col-12 col-lg-12 mb-5" id="posts">
+          <!-- thumbnails list -->
         </div>
       </section>
     </main>
