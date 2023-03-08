@@ -16,7 +16,7 @@ export async function getPosts() {
 }
 
 /**
- * This export function retrieves enables a logged in user to retrive all posts from the API by sending a GET request (with token in header).
+ * This export function enables a logged in user to retrive a single post from the API by sending a GET request (with token in header).
  * @param {number} id A users number ID.
  * @returns Returns JWT.
  */
