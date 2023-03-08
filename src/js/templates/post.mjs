@@ -1,32 +1,78 @@
-export function postTemplateA(postData) {
-  return `<div class="post" id=${postData.id}>${postData.title}</div>`;
+import { removePost } from "../api/posts/index.mjs";
+
+export function postsTemplateA(postData) {
+  const posts = document.createElement("div");
+  posts.innerHTML += `
+  <!-- Card-1 -->
+  <section class="container d-flex align-items-center justify-content-center mb-5" style="margin-top: 100px">
+    <div class="card" style="width: 42rem">
+      <div class="card-body">
+        <!-- Data -->
+        <div>
+        <div>
+        <button class="btn float-end me-1 delete-button" data-id="${postData.id}"><i class="fa-regular fa-trash-can" style="margin-top: -52px"></i></button>
+        <a href="../post/edit/?id=${postData.id}" class="btn float-end me-1"><i class="fa-regular fa-pen-to-square" style="margin-top: -52px"></i></a>
+        <a href="../post/?id=${postData.id}" class="btn float-end me-1"><i class="fa-regular fa-eye" style="margin-top: -52px"></i></a>
+        </div>
+          <div class="d-flex mb-3">
+            <a href="">
+              <img src="${postData.author.avatar}" class="border rounded-circle me-2"
+                alt="N/A" style="height: 40px; width: 40px" />
+            </a>
+            <div>
+              <a href="" class="text-dark mb-0">
+                <a href="../profile/?name=${postData.author.name}"><strong>${postData.author.name}</strong></a>
+                <p class="me-3"style="font-size: 0.68em;">${postData.created}</p>
+              </a>
+              <a href="" class="text-muted d-block" style="margin-top: -6px">
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Description -->
+        <div>
+          <h3>${postData.title}</h3>
+          <p>${postData.body}</p>
+        </div>
+      </div>
+      <!-- Media -->
+      <div class="bg-image hover-overlay ripple rounded-0" data-mdb-ripple-color="light">
+        <img src="${postData.media}" alt="" class="w-100"  style="margin-bottom: 5px" />
+        <a href="#!">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+        </a>
+        <div class="mx-4 mt-3 mb-3">
+            <ul class="list-unstyled d-flex justify-content-between mb-0 pe-xl-5">
+                <li><i class="far fa-comment"><span class="small ps-2">${postData._count.comments}</span></i></li>
+                <li><i class="fas fa-retweet"></i><span class="small ps-2">${postData._count.reactions}</span></li>
+                <li><i class="far fa-heart"></i><span class="small ps-2">${postData._count.reactions}</span></li>
+                <li><i class="far fa-share-square"></i></li>
+              </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>`;
+
+  const deleteButton = posts.querySelector(".delete-button");
+
+  deleteButton.addEventListener("click", () => {
+    removePost(postData.id);
+
+    setTimeout(() => {
+      location.reload();
+    }, 200);
+  });
+
+  return posts;
 }
 
-export function postTemplateB(postData) {
-  const post = document.createElement("div");
-  post.classList.add("post");
-  post.innerText = postData.title;
-
-  // const productsContainer = document.getElementById("#posts");
-
-  // postData.forEach(function (post) {
-  //   productsContainer.innerHTML + `<div class="post">${postData.title}</div>`;
-  // });
-
-  if (postData.media) {
-    const img = document.createElement("img");
-    img.src = postData.media;
-    img.alt = `Image source ${postData.title}`;
-    post.append(img);
-  }
-
-  return post;
+//All posts
+export function renderPostsTemplate(postDataList, parent) {
+  parent.append(...postDataList.map(postsTemplateA));
 }
 
+//Single post
 export function renderPostTemplate(postData, parent) {
-  parent.append(postTemplateB(postData));
-}
-
-export function renderPostTemplates(postDataList, parent) {
-  parent.append(...postDataList.map(postTemplateB));
+  parent.append(postsTemplateA(postData));
 }

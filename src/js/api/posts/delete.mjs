@@ -4,7 +4,13 @@ import { fetchWithToken } from "../fetchWithToken.mjs";
 const action = "/posts";
 const method = "delete";
 
-export async function removePost(id) {
+/**
+ * This export function deletes a users own posts and throws an error if a number ID is missing. It sends a DELETE request(with token in header) to the API if a number ID is present.
+ * @param {number} id A users number ID.
+ * @returns Returns JWT.
+ */
+
+export async function removePost(id = 0) {
   if (!id) {
     throw new Error("Post id is required when deleting a post");
   }
