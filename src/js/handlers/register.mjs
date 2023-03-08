@@ -1,5 +1,9 @@
 import { register } from "../api/auth/register.mjs";
 
+/**
+ * Listening for a submit event from form button and calls the register function from auth/register.mjs file. Registration data is sent to the API.
+ */
+
 export function setFormRegistrationListener() {
   const form = document.querySelector("#registerForm");
 
@@ -10,8 +14,11 @@ export function setFormRegistrationListener() {
       const formData = new FormData(form);
       const profile = Object.fromEntries(formData.entries());
 
-      //Send it to api
       register(profile);
+
+      alert("Registration sucessful! Yey!");
+
+      window.location.href = "../login/";
     });
   }
 }
