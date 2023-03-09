@@ -1,7 +1,7 @@
 import { login } from "../api/auth/login.mjs";
 
 /**
- * Listening for a submit event from form button and calls the login function from auth/login.mjs file. Login data is sent to the API.
+ * Listens for a submit event from form button and calls the login function from auth/login.mjs file. Login data is sent to the API.
  */
 
 export function setFormLoginListener() {

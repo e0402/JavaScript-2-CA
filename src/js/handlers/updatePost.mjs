@@ -1,5 +1,9 @@
 import { getPost, updatePost } from "../api/posts/index.mjs";
 
+/**
+ * This export function listens for a form and if present is then "hydrated" with info from post being created earlier. Like the create post form - title, body, tags and media can be updated. The function then listens for a submit event from form button and PUT request from posts/update.mjs is completed.
+ */
+
 export async function setUpdatePostListener() {
   const form = document.querySelector("#editPost");
 
@@ -26,7 +30,6 @@ export async function setUpdatePostListener() {
       const post = Object.fromEntries(formData.entries());
       post.id = id;
 
-      //Send it to api
       updatePost(post);
     });
   }

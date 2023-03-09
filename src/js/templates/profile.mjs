@@ -1,3 +1,9 @@
+/**
+ * This export function is an HTML profile template with dynamic values inserted to retrieve individual profile info from each user. The function then returns profile.
+ * @param {object} profileData Function parameter.
+ * @returns Posts is returned.
+ */
+
 export function profileTemplateA(profileData) {
   const profile = document.createElement("div");
   profile.innerHTML += `<section class="h-100 gradient-custom-2"">
@@ -101,6 +107,12 @@ export function profileTemplateA(profileData) {
 </div>`;
   return profile;
 }
+
+/**
+ * Export template function for rendering single profile as HTML using .map.
+ * @param {object} porofileData Function parameter indicating single profile.
+ * @param {object} parent Function parameter.
+ */
 
 export function renderProfileTemplate(profileData, parent) {
   parent.append(profileTemplateA(profileData));

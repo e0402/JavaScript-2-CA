@@ -5,7 +5,7 @@ const action = "/posts";
 const method = "delete";
 
 /**
- * This export function deletes a users own posts and throws an error if a number ID is missing. It sends a DELETE request(with token in header) to the API if a number ID is present.
+ * This export function deletes a users own posts and throws an error if a number ID is missing. It checks if the URL contains an ID parameter, throwing an error if a number ID is missing. If present, the ID is used to send a DELETE request (with token in header) to the API, deleting the post.
  * @param {number} id A users number ID.
  * @returns Returns JWT.
  */

@@ -1,5 +1,12 @@
 import { removePost } from "../api/posts/index.mjs";
 
+/**
+ * This export function is an HTML posts template with dynamic values inserted to retrieve individual post info from each post author. The function also listens for a click event from delete button, which then reloads page again, before posts is returned.
+ *
+ * @param {object} postData Function parameter.
+ * @returns Posts is returned.
+ */
+
 export function postsTemplateA(postData) {
   const posts = document.createElement("div");
   posts.innerHTML += `
@@ -67,12 +74,22 @@ export function postsTemplateA(postData) {
   return posts;
 }
 
-//All posts
+/**
+ * Export template function for rendering all posts as HTML using .map.
+ * @param {Array} postDataList Function parameter indicating list of posts.
+ * @param {object} parent Function parameter.
+ */
+
 export function renderPostsTemplate(postDataList, parent) {
   parent.append(...postDataList.map(postsTemplateA));
 }
 
-//Single post
+/**
+ * Export template function for rendering single post as HTML using .map.
+ * @param {object} postData Function parameter indicating single post.
+ * @param {object} parent Function parameter.
+ */
+
 export function renderPostTemplate(postData, parent) {
   parent.append(postsTemplateA(postData));
 }

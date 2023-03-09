@@ -2,11 +2,10 @@ import { postsTemplateA } from "../templates/post.mjs";
 
 const postsContainer = document.querySelector("#posts");
 
-//Filter posts
 const select = document.querySelector("#filterList");
 
 /**
- *
+ *This export function filters an array of posts by first listening for a change event, and then returns posts based on filter criteria set. The user can filter posts based on posts from the whole year, posts containing media content, posts with likes and posts with comments
  * @param {Array} posts An array of objects (posts).
  */
 
@@ -32,7 +31,11 @@ export function filterPosts(posts) {
       }
     });
 
-    //Rendering filtered posts result as HTML
+    /**
+     * This function renders the filtered post result as HTML.
+     * @param {Array} postsFilteredByDate An array of filtered objects (posts).
+     * @param {Element} postsContainer An empty div container.
+     */
     function renderPostFilterTemplate(postsFilteredByDate, postsContainer) {
       postsContainer.innerHTML = "";
 

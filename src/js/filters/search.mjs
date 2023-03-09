@@ -2,7 +2,11 @@ import { postsTemplateA } from "../templates/post.mjs";
 
 const postsContainer = document.querySelector("#posts");
 
-//Search function
+/**
+ * This export search function filters an array of posts by first listening for a submit event, and then returns posts based on filter criteria set. The user can search based on title, author name, body content and tag names for the posts.
+ * @param {Array} posts An array of objects(posts).
+ */
+
 export function setupSearch(posts) {
   const searchForm = document.querySelector("form#search");
 
@@ -31,7 +35,11 @@ export function setupSearch(posts) {
       );
     });
 
-    //Rendering search result as HTML
+    /**
+     * This function renders the filtered post/search results as HTML.
+     * @param {Array} filteredPosts An array of filtered objects (posts).
+     * @param {*} postsContainer An empty div container.
+     */
 
     function renderPostSearchTemplate(filteredPosts, postsContainer) {
       postsContainer.innerHTML = "";
@@ -42,7 +50,3 @@ export function setupSearch(posts) {
     renderPostSearchTemplate(filteredPosts, postsContainer);
   });
 }
-
-// if (!posts.length) {
-//   postsContainer.innerHTML = `<div>There were 0 matches for that specific search term</div>`;
-// }

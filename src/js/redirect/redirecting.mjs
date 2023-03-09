@@ -1,4 +1,6 @@
-//Changes page to posts feed on button click
+/**
+ * Changes page to posts feed on button click.
+ */
 
 export function redirecting() {
   const changePageBtn = document.querySelector(".changePagetoPostFeed");
