@@ -17,7 +17,7 @@ export async function getProfiles() {
 }
 
 /**
- * This export function enables a logged in user to retreive a single post. It checks if the URL contains a "name" parameter, throwing an error if a name is missing. If present, the name is used to send a GET request (with token in header) to the API, retreiving the profile.
+ * This export function enables a logged in user to retreive a single profile. It checks if the URL contains a "name" parameter, throwing an error if a name is missing. If present, the name is used to send a GET request (with token in header) to the API, retreiving the profile.
  * @param {string} name A users name.
  * @returns Returns JWT.
  */
