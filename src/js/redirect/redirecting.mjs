@@ -1,5 +1,5 @@
 /**
- * Changes page to posts feed on button click.
+ * Changes page from current page to posts feed page on button click.
  */
 
 export function redirecting() {
