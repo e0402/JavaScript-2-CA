@@ -25,5 +25,7 @@ export async function createPost(postData) {
     }),
   });
 
+  window.location.replace("../../posts/");
+
   return await response.json();
 }

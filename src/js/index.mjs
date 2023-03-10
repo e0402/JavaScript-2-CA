@@ -2,7 +2,6 @@ import * as listeners from "./handlers/index.mjs";
 import * as templates from "./templates/index.mjs";
 import * as postMethods from "./api/posts/index.mjs";
 import * as profileMethods from "./api/profiles/index.mjs";
-import { redirecting } from "./redirect/redirecting.mjs";
 import { readPosts } from "./handlers/index.mjs";
 
 const path = location.pathname;
@@ -24,5 +23,3 @@ if (path === "/profile/login/") {
 } else if (path === "/profile/") {
   listeners.readProfile();
 }
-
-redirecting();

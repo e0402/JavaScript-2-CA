@@ -28,5 +28,7 @@ export async function updatePost(postData) {
     }),
   });
 
+  window.location.replace("../../posts/");
+
   return await response.json();
 }
