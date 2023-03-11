@@ -110,7 +110,7 @@ export function profileTemplateA(profileData) {
 
 /**
  * Export template function for rendering single profile as HTML using .map.
- * @param {object} porofileData Function parameter indicating single profile.
+ * @param {object} profileData Function parameter indicating single profile.
  * @param {object} parent Function parameter.
  */
 
