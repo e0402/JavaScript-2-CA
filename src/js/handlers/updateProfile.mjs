@@ -48,7 +48,7 @@ export async function setUpdateProfileListener() {
       profile.email = email;
 
       updateProfile(profile);
-      alert("Profile successfully updated! Refresh page to see changes.");
+      alert("Profile successfully updated!");
     });
   }
 }

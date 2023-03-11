@@ -23,5 +23,7 @@ export async function updateProfile(profileData) {
     body: JSON.stringify(profileData),
   });
 
+  window.location.replace("/profile/edit/");
+
   return await response.json();
 }
