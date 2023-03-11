@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link href="/dist/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
+    <title>Whazzup | Update profile</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid">
+          <i
+          class="fas fa-user-friends fa-1x mx-2 ms-3"
+          style="color: #ffffff"
+        ></i>
+          <a class="navbar-brand me-5" href="../../posts/">Whazzup</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link white" href="../../posts/"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active white" aria-current="page" href="/profile/edit/">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link white" href="">Log-out</a>
+              </li>
+            </ul>
+            <form class="d-flex mx-4" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Only works on post feed"
+                aria-label="Search"
+              />
+              <button class="btn btn-two btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <main class="">
+      <section class="h-100 gradient-custom-2" style="margin-top: 50px">
+        <div class="container py-5 h-100">
+            <div
+            class="row d-flex justify-content-center align-items-center h-100"
+            >
+            <div class="col col-md-12 col-lg-7">
+                <div class="card">
+                <div
+                    class="rounded-top text-white d-flex flex-row green"
+                    style="height: 200px"
+                >
+                    <div
+                    class="ms-4 mt-5 d-flex flex-column"
+                    style="width: 150px"
+                    >
+                    <div id="avatar"></div>
+                    </div>
+                    <div class="ms-3" style="margin-top: 130px">
+                    <h5 id="firstName"></h5>
+                    <p>Wherever</p>
+                    </div>
+                </div>
+                <div class="p-4 text-black" style="background-color: #f8f9fa">
+                    <div class="d-flex justify-content-end text-center py-1">
+                    <div>
+                        <p class="mb-1 h5" id="postCount"></p>
+                        <p class="small text-muted mb-0">Posts created</p>
+                    </div>
+                        <div class="px-3">
+                        <p class="mb-1 h5" id="followers"></p>
+                        <p class="small text-muted mb-0">Followers</p>
+                    </div>
+                    <div>
+                        <p class="mb-1 h5" id="following"></p>
+                        <p class="small text-muted mb-0">Following</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="card-body p-4 text-black">
+                    <div class="mb-5">
+                    <p class="lead fw-normal mb-1">About</p>
+                    <div class="p-4" style="background-color: #f8f9fa">
+                       
+                        <form id="editProfile">
+
+                          <div class="form-outline mb-4">
+                              <label
+                              class="form-label"
+                              for="form2Example27"
+                              >Name</label>
+                              <input
+                                  type="text"
+                                  disabled
+                                  name="name"
+                                  class="form-control form-control-lg"
+                              />
+                              </div>
+          
+                          <div class="form-outline mb-4">
+                          <label
+                          class="form-label"
+                          for="form2Example27"
+                          >Email</label>
+                          <input
+                              type="email"
+                              disabled
+                              name="email"
+                              class="form-control form-control-lg"
+                          />
+                          </div>
+          
+                            <div class="form-outline mb-4">
+                              <label
+                              class="form-label"
+                              for="form2Example27"
+                            >Banner</label>
+                              <input
+                                type="url"
+                                name="banner"
+                                id="form2Example27"
+                                class="form-control form-control-lg"
+                                placeholder="https://example/id/12/345"
+                              />
+                            </div>
+          
+                            <div class="form-outline mb-4">
+                              <label
+                              class="form-label"
+                              for="form2Example27"
+                            >Avatar</label>
+                              <input
+                                type="url"
+                                name="avatar"
+                                id="form2Example27"
+                                class="form-control form-control-lg"
+                                placeholder="https://example/id/12/345"
+                              />
+                            </div>
+          
+                            <div class="pt-3">
+                                <button class="btn btn-two btn-outline-success btn-lg me-2">
+                                  Update profile
+                                </button>
+                              <a
+                                href="../../posts/"
+                                class="btn btn-two btn-lg btn-outline-success"
+                                width=""
+                                style="
+                                  padding: 8px;
+                                  border-radius: 0.65rem;
+                                  text-decoration: none;
+                                "
+                                ;
+                                >Back to feed</a
+                              >
+                            </div>
+                          </form>
+                        </div>
+                    </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      </main>
+      <footer class="footer mt-auto py-5 green col-md-12 justify-content-center my-5 pt-5 text-muted text-center text-small mb-0 green">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#" class="text-white">Privacy</a></li>
+          <li class="list-inline-item"><a href="#" class="text-white">Terms</a></li>
+          <li class="list-inline-item"><a href="#" class="text-white">Help</a></li>
+        </ul>
+        <p class="mb-1 text-light">&copy; 2023 Whazzup</p>
+      </footer>
+  </body>
+</html>

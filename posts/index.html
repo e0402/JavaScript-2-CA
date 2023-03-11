@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link href="/dist/css/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
+    <title>Whazzup | Posts</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md fixed-top">
+      <div class="container-fluid">
+        <i
+          class="fas fa-user-friends fa-1x mx-2 ms-3"
+          style="color: #ffffff"
+        ></i>
+        <a class="navbar-brand me-5" href="/posts/">Whazzup</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active white"
+                aria-current="page"
+                href="/posts/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link white" href="/profile/edit/">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link white" href="../profile/login/">Log-out</a>
+            </li>
+          </ul>
+          <form id="search" class="d-flex mx-4">
+            <input
+              required
+              minlength="2"
+              name="term"
+              type="search"
+              class="form-control me-2"
+              id="searchInput"
+              placeholder="Search for post content..."
+            />
+            <button class="btn btn-two btn-outline-success">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <main class="">
+      <h1
+        class="d-flex align-items-center justify-content-center"
+        style="margin-top: 150px"
+      >
+        Whazz on ur mind?
+      </h1>
+      <div class="d-flex align-items-center justify-content-center mb-4">
+        <a
+          href="../post/create/"
+          class="btn btn-two btn-lg btn-outline-success"
+          width=""
+          style="
+            margin-top: 50px;
+            padding: 12.5px;
+            border-radius: 0.65rem;
+            text-decoration: none;
+          "
+          ;
+          >Create new post</a
+        >
+      </div>
+      <div class="d-flex align-items-center justify-content-center pt-5 mb-0">
+        <label for="" class="text-black me-2">Post filters:</label>
+        <select id="filterList" class="me-3" style="background: white">
+          <option value="2023">All year</option>
+          <option value="media">Media</option>
+          <option value="likes">Liked</option>
+          <option value="comments">Commented</option>
+        </select>
+      </div>
+      <section class="d-flex align-items-center justify-content-center">
+        <div class="col-12 col-lg-12 mb-5" id="posts">
+          <!-- thumbnails list -->
+        </div>
+      </section>
+    </main>
+    <footer
+      class="footer mt-auto py-5 green col-md-12 justify-content-center my-5 pt-5 text-muted text-center text-small mb-0 green"
+    >
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="#" class="text-white">Privacy</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="text-white">Terms</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="text-white">Help</a>
+        </li>
+      </ul>
+      <p class="mb-1 text-light">&copy; 2023 Whazzup</p>
+    </footer>
+  </body>
+</html>
