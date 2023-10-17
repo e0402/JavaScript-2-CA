@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link href="/dist/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
+    <title>Whazzup | Update post</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid">
+          <i
+          class="fas fa-user-friends fa-1x mx-2 ms-3"
+          style="color: #ffffff"
+        ></i>
+          <a class="navbar-brand me-5" href="../../posts/">Whazzup</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active white" aria-current="page" href="../../posts/"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link white" href="../../profile/">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link white" href="">Log-out</a>
+              </li>
+            </ul>
+            <form class="d-flex mx-4" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Only works on post feed"
+                aria-label="Search"
+              />
+              <button class="btn btn-two btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <main class="m-5">
+      <section class="container d-flex align-items-center justify-content-center mb-5" style="margin-top: 100px">
+        <div class="card border-0" style="width: 42rem">
+          <div class="card-body">
+            <h1 class="d-flex align-items-center justify-content-center mb-5">Edit post</h1>
+            
+             
+
+            <div class="col-12 col-lg-12 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <form id="editPost">
+                
+                  <div class="form-outline mb-4">
+                    <label
+                    class="form-label"
+                    for="form2Example27"
+                  >Title</label>
+                      <input
+                        type="text"
+                        name="title"
+                        class="form-control form-control-lg"
+                        required
+                      />
+                    </div>
+
+                  <div class="form-outline mb-4">
+                    <label
+                    class="form-label"
+                    for="form2Example27"
+                  >Body</label>
+                    <textarea class="form-control" name="body" required></textarea>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label
+                    class="form-label"
+                    for="form2Example27"
+                  >Tags</label>
+                    <input
+                      type="text"
+                      name="tags"
+                      id="form2Example27"
+                      class="form-control form-control-lg"
+                    />
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label
+                    class="form-label"
+                    for="form2Example27"
+                  >Media</label>
+                    <input
+                      type="url"
+                      name="media"
+                      id="form2Example27"
+                      class="form-control form-control-lg"
+                    />
+                  </div>
+
+                  <div class="pt-3">
+                      <button class="btn btn-two btn-outline-success btn-lg me-2 changePagetoPostFeed">
+                        Update post
+                      </button>
+                    <a
+                      href="../../posts/"
+                      class="btn btn-two btn-lg btn-outline-success"
+                      width=""
+                      style="
+                        padding: 8px;
+                        border-radius: 0.65rem;
+                        text-decoration: none;
+                      "
+                      ;
+                      >Cancel</a
+                    >
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      </main>
+      <footer class="footer mt-auto py-5 green col-md-12 justify-content-center my-5 pt-5 text-muted text-center text-small mb-0 green">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#" class="text-white">Privacy</a></li>
+          <li class="list-inline-item"><a href="#" class="text-white">Terms</a></li>
+          <li class="list-inline-item"><a href="#" class="text-white">Help</a></li>
+        </ul>
+        <p class="mb-1 text-light">&copy; 2023 Whazzup</p>
+      </footer>
+  </body>
+</html>
