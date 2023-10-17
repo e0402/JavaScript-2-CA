@@ -1,8 +1,8 @@
 # JavaScript-2-CA
 
-## Link to Trello board:
+## Demo link:
 
-https://trello.com/invite/b/JCQfglFG/ATTI9e1b35e2bb7b218262123052f2ba370d05CCE4A5/javascript-2-ca
+https://wazzup-sm.netlify.app/profile/login/
 
 ## Project images:
 
